@@ -130,7 +130,7 @@ app-web-api/
 
 ## Requisitos
 
-- JDK 17 o superior (probado con JDK 21). Quarkus 3.17 no soporta JDK 25 sin ajustes.
+- JDK 17 o superior (probado con JDK 21). Quarkus 3.17.
 - PostgreSQL en ejecución con una base de datos llamada `pweb` (o ajusta `quarkus.datasource.jdbc.url`).
 - Docker, solo para ejecutar las pruebas de integración.
 - OpenSSL, para generar las claves JWT (o cualquier herramienta que genere un par RSA en PEM).
@@ -270,4 +270,3 @@ La prueba de integración `VentaResourceIT` levanta PostgreSQL con Testcontainer
   - El IVA es del 15 % y está definido en `VentaServiceImpl.TASA_IVA`.
   - La cédula del cliente debe tener 10 dígitos.
   - Los archivos de `GreetingResource` y `GreetingResourceTest` son código de plantilla de Quarkus.
-  - El `.gitignore` excluye `target/`, `certs/` (claves JWT), `graphify-out/`, archivos de IDE y logs. El proyecto aún no es un repositorio git; el `.gitignore` aplicará al inicializarlo.
